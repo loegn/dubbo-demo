@@ -1,0 +1,30 @@
+server:
+  port: 8083
+dubbo:
+  application:
+    name: dubbo-annotation
+#    registries:
+#      - id: registry1
+#        address: 127.0.0.1:2182
+#        protocol: zookeeper
+#      - id: registry2
+#        address: zookeeper://127.0.0.1:2181
+#        default: true
+    registry:
+      protocol: zookeeper
+      address: 127.0.0.1:2181
+#      default: true
+  protocol:
+    name: dubbo
+    port: 20892
+  consumer:
+    check: false
+    timeout: 60000
+    retries: 3
+  provider:
+    timeout: 30000
+    retries: 1
+  scan:
+    base-packages: com.example.dubbo.annotation.service.impl
+#  config:
+#    multiple: true

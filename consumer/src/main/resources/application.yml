@@ -1,0 +1,6 @@
+server:
+  port: 8082
+config:
+  dubbo:
+    service:
+      version: 1.0.0
